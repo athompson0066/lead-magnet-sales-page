@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn Every Email Into a Lead Generation Machine | Aiolos Media</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/widgetbot@3.5.3" defer></script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <span class="logo">Aiolos Media</span>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#demo" class="nav-link">See Demo</a>
+      <button class="btn btn-primary btn-sm" onclick="toggleChat()">Chat with Us</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">For Nutritionists &amp; Health Coaches</span>
+      <h1>Turn Every Email You Send Into a Lead Generation Machine</h1>
+      <p class="hero-sub">Your content is working. But the people who want to work with you are slipping through the cracks. Here's the fix.</p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary btn-lg">See How It Works</a>
+        <button class="btn btn-outline btn-lg" onclick="toggleChat()">Chat with Our AI Agent</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section section-dark">
+    <div class="container">
+      <span class="section-label">The Problem</span>
+      <h2>You're Paying for Attention. You're Only Harvesting 2%.</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📉</div>
+          <h3>The Traffic Leak</h3>
+          <p>Your Instagram. Your newsletter. Your content. All of it drives people to your site. But your only call-to-action is "Book a Free Consultation" — a high-friction ask for someone who just discovered you.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🚪</div>
+          <h3>The 90% Window</h3>
+          <p>Most visitors aren't ready for a 15-minute call. They read. They intend to follow up. They move on. You've lost them — and you never even knew they were there.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">💸</div>
+          <h3>The Wasted Spend</h3>
+          <p>Every ad dollar, every post, every email you send — you're paying for attention but only converting the 2% who are ready to buy right now. Everyone else walks out the door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">The Solution</span>
+      <h2>The Lead Bridge — Built for Nutritionists</h2>
+      <p class="section-intro">A lightweight lead qualification tool that lives in your existing touchpoints. Prospects get an immediate win in 30 seconds. You get qualified leads with their goals and budget already filtered.</p>
+      
+      <div class="solution-flow">
+        <div class="flow-step">
+          <div class="flow-number">1</div>
+          <h3>Add the Link</h3>
+          <p>Drop it in your email signature, Instagram bio, or LinkedIn. Takes 30 seconds.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-number">2</div>
+          <h3>They Take the Audit</h3>
+          <p>30 seconds. Gets them a personalized result — a Metabolic Health Audit or goal calculator. High-value, zero friction.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-number">3</div>
+          <h3>You Get Qualified Leads</h3>
+          <p>Every person who completes the audit lands in your dashboard with name, email, goals, and budget. Your 15-minute call becomes a closing call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="section section-demo" id="demo">
+    <div class="container">
+      <span class="section-label">See It In Action</span>
+      <h2>Here's What It Looks Like</h2>
+      <p class="section-intro">We built this for a Toronto nutritionist. Click through to see the full experience.</p>
+      <div class="demo-frame">
+        <div class="demo-mockup">
+          <div class="demo-header">
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-url">dr-amara.aiolosmedia.com</span>
+          </div>
+          <div class="demo-content">
+            <img src="https://placehold.co/800x500/1a1a2e/FFF?text=Live+Demo:+Dr.+Amara+PWA" alt="Dr. Amara Lead Magnet Demo" class="demo-screenshot">
+            <div class="demo-overlay">
+              <a href="https://dr-amara.aiolosmedia.com" target="_blank" class="btn btn-primary">Open Full Demo ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-caption">Live demo — Dr. Amara Osei, RD. Click the Metabolic Health Audit to experience the full flow.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section-dark">
+    <div class="container">
+      <span class="section-label">What You Get</span>
+      <h2>Everything You Need to Capture and Close More Clients</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>30-Second Setup</h3>
+          <p>No code. No backend access. Just swap one link and you're live.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Lead Dashboard</h3>
+          <p>Every lead comes with name, email, goals, and budget pre-filtered.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Works Everywhere</h3>
+          <p>Email signature, Instagram bio, LinkedIn, website — one link, any platform.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Sales Agent</h3>
+          <p>Our AI qualifies leads 24/7 and schedules calls directly into your calendar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Your Branding</h3>
+          <p>Custom colors, your logo, your name. It looks like yours.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Track Everything</h3>
+          <p>See how many leads come from each platform. Know exactly what's working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <span class="section-label">Simple Pricing</span>
+      <h2>Start Capturing Leads Today</h2>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Lead Magnet Setup</h3>
+          <p>Everything you need to start generating qualified leads</p>
+        </div>
+        <div class="pricing-price">
+          <span class="price-amount">$149</span>
+          <span class="price-period">one-time setup</span>
+        </div>
+        <div class="pricing-includes">
+          <h4>Includes:</h4>
+          <ul>
+            <li>✅ Custom branded lead magnet tool</li>
+            <li>✅ 30 days free (then $99/mo)</li>
+            <li>✅ Lead dashboard access</li>
+            <li>✅ Email signature + social media setup</li>
+            <li>✅ AI sales agent integration</li>
+            <li>✅ Conversion tracking</li>
+          </ul>
+        </div>
+        <div class="pricing-cta">
+          <button class="btn btn-primary btn-lg btn-block" onclick="toggleChat()">Chat to Get Started</button>
+          <p class="pricing-note">Or email us at <a href="mailto:info@aiolosmedia.com">info@aiolosmedia.com</a></p>
+        </div>
+        <div class="pricing-guarantee">
+          <p><strong>Guarantee:</strong> If you don't get 10 qualified leads in your first 30 days, we'll refund your setup fee — no questions asked.</p>
+        </div>
+      </div>
+      <div class="pricing-paypal">
+        <p>Preferred payment: <strong>PayPal</strong></p>
+        <a href="https://paypal.me/aiolosmedia/149" target="_blank" class="btn btn-paypal">
+          Pay $149 Setup Fee via PayPal →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-dark">
+    <div class="container">
+      <span class="section-label">Questions?</span>
+      <h2>Frequently Asked</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What exactly is the lead magnet?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>It's a 30-second interactive tool — like a Metabolic Health Audit or goal calculator — that lives in your email signature, Instagram bio, or LinkedIn. Prospects get an immediate personalized result. You get their contact info and qualification data before they ever talk to you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do I need technical skills to set this up?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. You just swap one link. We handle everything else — the tool, the tracking, the dashboard. If you can copy and paste a URL, you can set this up in 30 seconds.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What happens after the 30-day free trial?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>It's $99/month. No contracts, no commitments. Cancel anytime. But once you see the leads coming in, you won't want to cancel.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How is this different from other lead generation tools?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most tools ask for contact info before giving any value. We flip that: prospects get something valuable immediately (a personalized audit or plan), and we use that interaction to qualify them. You get leads who already trust you and know your expertise — they're far more likely to convert.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What if I don't get any leads?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>We guarantee 10 qualified leads in 30 days or we refund your setup fee. If you don't get results, you don't pay. That's how confident we are in this working.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-cta">
+    <div class="container">
+      <h2>Ready to Stop Losing Leads?</h2>
+      <p>Join nutritionists who are capturing the 90% they were previously losing.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="toggleChat()">Chat with Our AI Agent</button>
+        <a href="https://dr-amara.aiolosmedia.com" target="_blank" class="btn btn-outline btn-lg">See Live Demo First</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Aiolos Media. All rights reserved.</p>
+      <p><a href="mailto:info@aiolosmedia.com">info@aiolosmedia.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header" onclick="toggleChat()">
+      <span class="chat-title">Chat with Albert's AI</span>
+      <span class="chat-status" id="chatStatus">
+        <span class="status-dot"></span> Online
+      </span>
+      <button class="chat-close" id="chatCloseBtn" onclick="event.stopPropagation(); toggleChat()">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          <p>Hi! I'm Albert's AI sales assistant. I can tell you everything about the Lead Magnet service, answer your questions, and help you get started. What would you like to know?</p>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
+        <button class="chat-send" onclick="sendChatMessage()">Send</button>
+      </div>
+      <div class="chat-footer">
+        <p>Powered by <strong>Aiolos Media</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

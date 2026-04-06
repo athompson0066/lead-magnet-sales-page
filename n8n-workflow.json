@@ -1,0 +1,108 @@
+{
+  "name": "Lead Magnet AI Sales Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-magnet-chat",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "id": "webhook-lead-magnet"
+    },
+    {
+      "parameters": {
+        "model": "glm-5:cloud",
+        "options": {
+          "systemMessage": "You are Albert's AI sales assistant for Aiolos Media. You help visitors understand our Lead Magnet service for nutritionists. Pricing: $149 setup (includes 30 days free) + $99/mo after. Features: custom branded lead magnet tool (Metabolic Health Audit), email/Instagram/LinkedIn integration, qualified lead dashboard with name/email/goals/budget, AI sales agent that qualifies leads 24/7. Be helpful, professional, and close the sale. Ask for their name, email, and business name to qualify them. If they're ready to start, tell them to pay via PayPal at https://paypal.me/aiolosmedia/149 and Albert will reach out within 24 hours."
+        }
+      },
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1,
+      "position": [500, 300],
+      "id": "ai-agent-lead-magnet"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "node": "Google Sheets",
+        "sheetId": "",
+        "options": {
+          "valueInputMode": "USER_ENTERED"
+        }
+      },
+      "name": "Save Lead to Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [750, 300],
+      "id": "save-lead-sheet",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "chatId": "8323393174",
+        "text": "New lead from sales page chat!\n\n{{ $json.name }}\n{{ $json.email }}\n{{ $json.business }}",
+        "sendFile": false
+      },
+      "name": "Notify Albert on Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [750, 500],
+      "id": "telegram-albert",
+      "credentials": {
+        "telegramApi": "aiolos-telegram"
+      }
+    },
+    {
+      "parameters": {
+        "emailTo": "{{ $json.email }}",
+        "subject": "Thanks for your interest — Aiolos Media Lead Magnet",
+        "emailBody": "<h2>Thanks for your interest!</h2><p>Hi {{ $json.name }},</p><p>Albert will reach out to you within 24 hours to discuss your Lead Magnet setup for {{ $json.business }}.</p><p>In the meantime, check out the live demo at <a href='https://dr-amara.aiolosmedia.com'>dr-amara.aiolosmedia.com</a>.</p><p>Best,<br>Albert Thompson<br>Aiolos Media</p>",
+        "options": {}
+      },
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [750, 700],
+      "id": "confirmation-email"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://n8n.srv1524386.hstgr.cloud/webhook/lead-magnet-response",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "response",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        }
+      },
+      "name": "Return Response to Website",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [1000, 300],
+      "id": "return-response"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "AI Agent", "type": "main", "index": 0 }]]
+    },
+    "AI Agent": {
+      "main": [[
+        { "node": "Return Response to Website", "type": "main", "index": 0 },
+        { "node": "Notify Albert on Telegram", "type": "main", "index": 0 }
+      ]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
