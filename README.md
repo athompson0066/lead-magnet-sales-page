@@ -87,3 +87,4 @@ Monthly: Albert sends invoice via PayPal after 30 days
 3. `/sales-page/app.js` — chat widget + PayPal button
 4. `/n8n-workflow.json` — n8n workflow export (importable)
 # Updated Mon Apr  6 12:52:22 PM CDT 2026
+# GitHub auto-deploy active - Mon Apr  6 01:15:33 PM CDT 2026
